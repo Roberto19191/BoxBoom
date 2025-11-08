@@ -4,13 +4,13 @@ const cadSelect = document.querySelector("#sitcad");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (cadSelect && cadSelect.value === "") {
+    if(cadSelect.value === ""){
         alert("Por favor, escolha uma situação de login!");
         return;
     }
 
     form.submit();
-});
+})
 
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
@@ -19,34 +19,32 @@ const passwordInput = document.querySelector("#password");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (nameInput && nameInput.value === "") {
+    if(nameInput.value ===""){
         alert("Por favor, preencha o seu nome");
         return;
     }
 
-    if (emailInput && emailInput.value === "") {
+    if(emailInput.value ===""){
         alert("Por favor, preencha o seu e-mail");
         return;
     }
-
-    if (passwordInput && !validatePassword(passwordInput.value, 8)) {
+    
+    if(!validatePassword(passwordInput.value, 8)){
         alert("A senha precisa ter no mínimo 8 dígitos");
         return;
     }
 
     form.submit();
-});
+})
 
 function validatePassword(password, minDigit) {
     if (password.length >= minDigit) {
-        return true;
-    }
-    return false;
-}
+        return true
 
-// -------------------------------
-// SUAS NOVAS VALIDAÇÕES AQUI 👇
-// -------------------------------
+    }
+    return false
+};
+
 const larguraInput = document.querySelector("#largura");
 const profundidadeInput = document.querySelector("#profundidade");
 const comprimentoInput = document.querySelector("#comprimento");
@@ -58,61 +56,55 @@ const tampaInput = document.querySelector("#tampa");
 const personalizacaoInput = document.querySelector("#personalização");
 const finalidadeInput = document.querySelector("#finalidade");
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+form.addEventListener("submit", (event)=>{
+     event.preventDefault();
 
-    // só executa se o formulário tiver esses campos
-    if (larguraInput && larguraInput.value.trim() === "") {
-        alert("Por favor, preencha a largura da caixa.");
+    if (larguraInput.value === ""){
+        alert("Por favor preencha a largura da caixa")
         return;
     }
 
-    if (profundidadeInput && profundidadeInput.value.trim() === "") {
-        alert("Por favor, preencha a profundidade da caixa.");
+    if (profundidadeInput.value === ""){
+        alert("Por favor preencha a profundidade da caixa")
         return;
     }
-
-    if (comprimentoInput && comprimentoInput.value.trim() === "") {
-        alert("Por favor, preencha o comprimento da caixa.");
+    if (comprimentoInput.value === ""){
+        alert("Por favor preencha comprimento da caixa")
         return;
     }
-
-    if (espessuraInput && espessuraInput.value.trim() === "") {
-        alert("Por favor, preencha a espessura da caixa.");
+    if (espessuraInput.value === ""){
+        alert("Por favor preencha a espessura da caixa")
         return;
     }
-
-    if (pesoInput && pesoInput.value.trim() === "") {
-        alert("Por favor, preencha o peso da caixa.");
+    if (pesoInput.value === ""){
+        alert("Por favor preencha o peso da caixa")
         return;
     }
-
-    if (materialInput && materialInput.value.trim() === "") {
+     if (materialInput.value === "") {
         alert("Por favor, informe o tipo de material da caixa.");
         return;
     }
 
-    if (corInput && corInput.value.trim() === "") {
+    if (corInput.value === "") {
         alert("Por favor, informe a cor ou acabamento desejado.");
         return;
     }
 
-    if (tampaInput && tampaInput.value.trim() === "") {
+    if (tampaInput.value === "") {
         alert("Por favor, informe se a caixa terá tampa.");
         return;
     }
 
-    if (personalizacaoInput && personalizacaoInput.value.trim() === "") {
+    if (personalizacaoInput.value === "") {
         alert("Por favor, informe se deseja personalização.");
         return;
     }
 
-    if (finalidadeInput && finalidadeInput.value.trim() === "") {
+    if (finalidadeInput.value === "") {
         alert("Por favor, informe a finalidade da caixa.");
         return;
     }
 
-    // Se tudo estiver certo, envia o formulário normalmente
-    alert("Formulário enviado com sucesso!");
     form.submit();
-});
+
+})

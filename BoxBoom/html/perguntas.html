@@ -42,15 +42,22 @@
         <label for="cor">Qual cor ou acabamento desejado:</label>
         <input type="text" id="cor">
 
-        <label for="tampa">A caixa terá tampa ?</label>
-        <input type="text" id="tampa">
+        <label for="tampa">A caixa terá tampa?</label>
+        <select name="tampa" id="tampa">
+            <option value>----</option>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+        </select>
 
         <label for="personalização">Deseja personalização ?</label>
-        <input type="text" id="personalização">
+        <select name="personalização" id="personalização">
+            <option value>----</option>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+        </select>
 
-        <label for="finalidade">Qual será a finalidade da caixa:</label>
-        <input type="text" id="finalidade">
-
+        <label for="finalidade">Descreva a personalização:</label>
+        <textarea name="finalidade" id="finalidade"></textarea>
 
         <button type="submit">Enviar</button>
     </form>
